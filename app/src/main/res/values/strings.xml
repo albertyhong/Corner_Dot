@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Corner Dot</string>
+
+    <string name="color">Select a color:</string>
+    <string name="location">Select a location:</string>
+    <string name="submit_button">Submit</string>
+    <string name="action_settings">Settings</string>
+
+    <string-array name="colors_array">
+        <item>Blue</item>
+        <item>Green</item>
+        <item>Red</item>
+        <item>Yellow</item>
+    </string-array>
+
+    <string-array name="locations_array">
+        <item>Top-Left</item>
+        <item>Top-Right</item>
+        <item>Bottom-Left</item>
+        <item>Bottom-Right</item>
+    </string-array>
+</resources>
