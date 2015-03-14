@@ -7,6 +7,7 @@
     <string name="action_settings">Settings</string>
 
     <string-array name="colors_array">
+        <item>Select a color:</item>
         <item>Blue</item>
         <item>Green</item>
         <item>Red</item>
@@ -14,6 +15,7 @@
     </string-array>
 
     <string-array name="locations_array">
+        <item>Select a location:</item>
         <item>Top-Left</item>
         <item>Top-Right</item>
         <item>Bottom-Left</item>
