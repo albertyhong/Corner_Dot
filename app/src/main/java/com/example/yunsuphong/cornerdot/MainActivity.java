@@ -95,6 +95,8 @@ public class MainActivity extends ActionBarActivity {
 
                 Context context = v.getContext();
                 Toast.makeText(context, "Selections submitted " + id1 + " " + id2, Toast.LENGTH_LONG).show();
+
+                setContentView(new TouchView(context));
             }
         });
 
