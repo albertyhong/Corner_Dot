@@ -1,6 +1,7 @@
 package com.example.yunsuphong.cornerdot;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
@@ -91,12 +92,21 @@ public class MainActivity extends ActionBarActivity {
             public void onClick(View v) {
                 //Convert into a button object. Assuming view being received is a button. Need if statement to ensure
                 Button button = (Button) v;
-                button.setText("Thanks for pressing this button.");
 
-                Context context = v.getContext();
-                Toast.makeText(context, "Selections submitted " + id1 + " " + id2, Toast.LENGTH_LONG).show();
+                if (id1 != 0 && id2 != 0) {
+                    button.setText("Thanks for pressing this button.");
 
-                setContentView(new TouchView(context));
+                    Context context = v.getContext();
+                    Toast.makeText(context, "Selections submitted " + id1 + " " + id2, Toast.LENGTH_LONG).show();
+
+                    //Get the array of colors from the .xml file, as in exercise 2 of Japan.
+                    Resources resources = getResources();
+                    String[] colors = resources.getStringArray(R.array.colors_array);
+                    String color = colors[(int)id1];
+                    MainActivity.this.setContentView(new TouchView(context, color, (int)id1));
+                } else {
+                    button.setText("Selections invalid");
+                }
             }
         });
 
