@@ -102,8 +102,8 @@ public class MainActivity extends ActionBarActivity {
                     //Get the array of colors from the .xml file, as in exercise 2 of Japan.
                     Resources resources = getResources();
                     String[] colors = resources.getStringArray(R.array.colors_array);
-                    String color = colors[(int)id1];
-                    MainActivity.this.setContentView(new TouchView(context, color, (int)id1));
+                    //String color = colors[(int)id1];
+                    MainActivity.this.setContentView(new TouchView(context, (int)id1, (int)id2));
                 } else {
                     button.setText("Selections invalid");
                 }
